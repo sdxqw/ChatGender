@@ -21,18 +21,19 @@ public final class Main extends JavaPlugin {
     public static String fullPerm;
     public static String msgSetted;
 
+    public static String pluginPrefix = "[ChatGender]";
+
     @Override
     public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage(prefix + " Loading " + getDescription().getName() + "/" + getDescription().getVersion());
+        Bukkit.getConsoleSender().sendMessage(pluginPrefix + " Loading " + getDescription().getName() + "/" + getDescription().getVersion());
         this.getCommand("gender").setExecutor(new Commands());
         this.saveDefaultConfig();
-        Bukkit.getConsoleSender().sendMessage(prefix + " Saved Config");
+        Bukkit.getConsoleSender().sendMessage(pluginPrefix + " Saved Config");
         initialize();
-        Bukkit.getConsoleSender().sendMessage(prefix + " Initialize Config");
+        Bukkit.getConsoleSender().sendMessage(pluginPrefix + " Initialize Config");
     }
 
     public void initialize(){
-
         // Genders
         gender1 = getConfig().getString("genders.gender1");
         gender2 = getConfig().getString("genders.gender2");
@@ -47,8 +48,6 @@ public final class Main extends JavaPlugin {
         wrongTypo = getConfig().getString("wrongtypo");
         fullPerm = getConfig().getString("fullperm");
         msgSetted = getConfig().getString("messagesetted");
-
-        Bukkit.getConsoleSender().sendMessage(prefix + " Initializing" + getDescription().getName() + "/" + getDescription().getVersion());
     }
 
 }
