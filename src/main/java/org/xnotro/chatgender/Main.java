@@ -19,12 +19,13 @@ public final class Main extends JavaPlugin {
         saveConfig();
         reloadConfig();
         Bukkit.getConsoleSender().sendMessage(prefix + " Saved Config");
+        initialize();
     }
 
     public void initialize(){
-        gender1 = getConfig().getString("gender1");
-        gender2 = getConfig().getString("gender2");
-        helicopter = getConfig().getString("helicopter");
+        gender1 = getConfig().getString("genders.gender1");
+        gender2 = getConfig().getString("genders.gender2");
+        helicopter = getConfig().getString("genders.helicopter");
         Bukkit.getConsoleSender().sendMessage(prefix + " Initializing" + getDescription().getName() + "/" + getDescription().getVersion());
     }
 

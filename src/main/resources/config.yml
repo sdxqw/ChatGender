@@ -1,5 +1,4 @@
-gender1: "Girl"
-
-gender2: "Boy"
-
-helicopter: "Helicopter"
+genders:
+  gender1: "Girl"
+  gender2: "Boy"
+  helicopter: "Helicopter"
