@@ -16,7 +16,9 @@ public final class Main extends JavaPlugin {
 
         Bukkit.getConsoleSender().sendMessage(prefix + " Loading " + getDescription().getName() + "/" + getDescription().getVersion());
         this.getCommand("gender").setExecutor(new Commands());
-        this.saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+        reloadConfig();
         Bukkit.getConsoleSender().sendMessage(prefix + " Saved Config");
     }
 
