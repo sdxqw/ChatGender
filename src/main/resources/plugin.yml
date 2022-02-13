@@ -9,4 +9,3 @@ description: Chat Gender is a plugin that change the color name on the type of y
 commands:
   gender:
     description: select gender
-    usage: /gender

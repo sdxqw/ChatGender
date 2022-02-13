@@ -2,3 +2,12 @@ genders:
   gender1: "Girl"
   gender2: "Boy"
   helicopter: "Helicopter"
+
+colores:
+  color1: "§b"
+  color2: "§d"
+
+prefix: "§7[§fGender§7] §f>"
+wrongtypo: "§cTF Did You Typed??"
+fullperm: "§eNow You Have Full Perms >:)"
+messagesetted: "§aNow Your Gender Is Setted To"
