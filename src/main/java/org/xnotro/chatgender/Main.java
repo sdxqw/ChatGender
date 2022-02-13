@@ -21,7 +21,6 @@ public final class Main extends JavaPlugin {
     }
 
     public void initialize(){
-
         gender1 = getConfig().getString("gender1");
         gender2 = getConfig().getString("gender2");
         helicopter = getConfig().getString("helicopter");
