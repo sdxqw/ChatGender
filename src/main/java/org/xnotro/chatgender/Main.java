@@ -13,7 +13,6 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
         Bukkit.getConsoleSender().sendMessage(prefix + " Loading " + getDescription().getName() + "/" + getDescription().getVersion());
         this.getCommand("gender").setExecutor(new Commands());
         getConfig().options().copyDefaults(true);
