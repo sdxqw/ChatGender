@@ -1,0 +1,12 @@
+name: ChatGender
+version: '${project.version}'
+main: org.xnotro.chatgender.Main
+api-version: 1.18
+prefix: ChatGender
+authors: [ xnotro ]
+description: Chat Gender is a plugin that change the color name on the type of your gender!
+
+commands:
+  gender:
+    description: select gender
+    usage: /gender
