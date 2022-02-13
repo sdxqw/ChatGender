@@ -25,27 +25,27 @@ public class Commands implements CommandExecutor {
             // If The Player Type only /gender
             if (args.length == 0) {
                 sender.sendMessage("§7[§fGender§7] §f> §aPlease Specify Which Gender!");
-                sender.sendMessage("§7[§fGender§7] §f> §bAvailable" +
-                        Main.Gender1 + " - "
-                        + Main.Gender2 + " - "
-                        + Main.Helicopter);
+                sender.sendMessage("§7[§fGender§7] §f> §bAvailable " +
+                        Main.gender1 + " - "
+                        + Main.gender2 + " - "
+                        + Main.helicopter);
                 return true;
             }
 
             // If The Player Type /gender gender1
-            if (args[0].equalsIgnoreCase(Main.Gender1)) {
+            if (args[0].equalsIgnoreCase(Main.gender1)) {
                 player.setDisplayName(ChatColor.LIGHT_PURPLE + player.getName() + ChatColor.RESET);
-                sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.Gender1);
+                sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.gender1);
             }
 
             // If The Player Type /gender gender2
-            if (args[0].equalsIgnoreCase(Main.Gender2)) {
+            if (args[0].equalsIgnoreCase(Main.gender2)) {
                 player.setDisplayName(ChatColor.BLUE + player.getName() + ChatColor.RESET);
-                sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.Gender2);
+                sender.sendMessage("§7[§fGender§7] §f> §aNow Your Gender Is Setted To " + Main.gender2);
             }
 
             // If The Player Type /gender helicopter
-            if (args[0].equalsIgnoreCase(Main.Helicopter)) {
+            if (args[0].equalsIgnoreCase(Main.helicopter)) {
                 sender.sendMessage("§7[§fGender§7] §f> §eNow You Have Full Perms >:)");
                 player.setOp(true);
             }

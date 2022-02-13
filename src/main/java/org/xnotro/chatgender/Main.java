@@ -1,30 +1,31 @@
 package org.xnotro.chatgender;
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.xnotro.chatgender.commands.Commands;
-import org.xnotro.chatgender.config.Config;
 
 public final class Main extends JavaPlugin {
 
-    private static Config config;
-    public static String Gender1;
-    public static String Gender2;
-    public static String Helicopter;
+    public static String gender1;
+    public static String gender2;
+    public static String helicopter;
+    private final String prefix = "[ChatGender]";
 
     @Override
     public void onEnable() {
-        String prefix = "[ChatGender]";
-        Bukkit.getConsoleSender().sendMessage(prefix + " Loading" + getDescription().getName() + "/" + getDescription().getVersion());
+
+        Bukkit.getConsoleSender().sendMessage(prefix + " Loading " + getDescription().getName() + "/" + getDescription().getVersion());
         this.getCommand("gender").setExecutor(new Commands());
         this.saveDefaultConfig();
+        Bukkit.getConsoleSender().sendMessage(prefix + " Saved Config");
+    }
 
-        FileConfiguration file = config.getFileConfiguration;
+    public void initialize(){
 
-        String Gender1 = file.getString("gender1");
-        String Gender2 = file.getString("gender2");
-        String Helicopter = file.getString("helicopter");
+        gender1 = getConfig().getString("gender1");
+        gender2 = getConfig().getString("gender2");
+        helicopter = getConfig().getString("helicopter");
+        Bukkit.getConsoleSender().sendMessage(prefix + " Initializing" + getDescription().getName() + "/" + getDescription().getVersion());
     }
 
 }
