@@ -8,7 +8,7 @@
 - Not Gonna Lie I Need TODO Config
 
 # Source:
-its free an opensource 
+its free and opensource 
 (i dont know if someone gonna reuse this code lmao)
 
 # Help:
